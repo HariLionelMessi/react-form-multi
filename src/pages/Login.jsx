@@ -4,7 +4,6 @@ import loginImg from "../assets/login.png"
 const Login = ({ setIsLoggedIn }) => {
     return (
         <div>
-            <h2>Login</h2>
             <Template
                 title="Welcome Back"
                 desc1='Build skills and earn more'

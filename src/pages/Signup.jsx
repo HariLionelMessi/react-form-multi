@@ -6,9 +6,8 @@ const Signup = ({ setIsLoggedIn, isLoggedIn }) => {
         <>
 
             <div>
-                <h2>Signup</h2>
                 <Template
-                    title="Hi there!"
+                    title="Join the millions learning to code with StudyNotion for free"
                     desc1='Build skills and earn more'
                     desc2="Education is future-proof"
                     img={signupImg}

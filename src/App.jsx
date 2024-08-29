@@ -6,25 +6,41 @@ import Navbar from './components/Navbar.jsx'
 import Signup from './pages/Signup.jsx'
 import NotFound from './pages/NotFound.jsx'
 import { useState } from 'react'
+import PrivateRouter from './components/PrivateRouter.jsx'
+
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   return (
     <>
-      <Router>
-        <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
-        <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route exact path='/Login' element={<Login setIsLoggedIn={setIsLoggedIn} />} />
-          {
-            isLoggedIn &&
-            <Route exact path='/Dashboard' element={<Dashboard />} />
-          }
-          <Route exact path='/Signup' element={<Signup setIsLoggedIn={setIsLoggedIn} />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Router>
+      <div className='overflow-x-hidden min-h-[100vh] bg-[#000814] text-white'>
+        <Router>
+          <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route exact path='/Login' element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+            {/* {
+              isLoggedIn &&
+              <Route exact path='/Dashboard' element={<Dashboard />} />
+            } */}
+            {/* <PrivateRouter isLoggedIn={isLoggedIn}>
+              <Dashboard />
+            </PrivateRouter> */}
+            <Route
+              exact path="/Dashboard"
+              element={
+                <PrivateRouter isLoggedIn={isLoggedIn}>
+                  <Dashboard />
+                </PrivateRouter>
+              }
+            />
+            <Route exact path='/Signup' element={<Signup setIsLoggedIn={setIsLoggedIn} />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Router>
+      </div>
+
     </>
   )
 }

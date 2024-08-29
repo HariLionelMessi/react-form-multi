@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
 .active {
   color: red;
   text-decoration: underline;
+  background-color: gray;
 }
