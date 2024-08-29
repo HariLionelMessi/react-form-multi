@@ -7,7 +7,7 @@
 }
 
 .active {
-  color: red;
+  color: white;
   text-decoration: underline;
-  background-color: gray;
+  background-color: #161d29;
 }

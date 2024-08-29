@@ -37,19 +37,19 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
                 {
                     !isLoggedIn &&
                     <NavLink style={{ borderRadius: '10px' }} to={'/Signup'} >
-                        <button className="px-2 py-1">Signup</button>
+                        <button className="px-2 py-1 ">Signup</button>
                     </NavLink>
                 }
                 {
                     isLoggedIn &&
                     <NavLink style={{ borderRadius: '10px' }} to={'/'} >
-                        <button className="px-2 py-1" onClick={() => setIsLoggedIn(false)}>Logout</button>
+                        <button className="px-2 py-1 " onClick={() => setIsLoggedIn(false)}>Logout</button>
                     </NavLink>
                 }
                 {
                     isLoggedIn &&
                     <NavLink style={{ borderRadius: '10px' }} to={'/Dashboard'} >
-                        <button className="px-2 py-1">Dashboard</button>
+                        <button className="px-2 py-1 ">Dashboard</button>
                     </NavLink>
                 }
             </div>

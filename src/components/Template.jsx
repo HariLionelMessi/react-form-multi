@@ -5,7 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 
 const Template = ({ title, desc1, desc2, img, formtype, setIsLoggedIn }) => {
     return (
-        <div className="flex justify-center items-center mx-auto w-[90%] max-w-[1100px] py-12 gap-x-28 gap-y-0">
+        <div className="flex justify-center items-center flex-col sm:flex-row mx-auto w-[90%] max-w-[1100px] py-12 gap-y-10 sm:gap-x-28">
 
             <div className="w-11/12 max-w-[350px] mx-0 ">
                 <h1
@@ -30,7 +30,7 @@ const Template = ({ title, desc1, desc2, img, formtype, setIsLoggedIn }) => {
                 p-2 flex justify-center gap-x-3 rounded-[8px] font-medium
                 bg-[#000814] hover:border-[#141923] border border-[#393939] hover:bg-[rgba(0,0,0,0.7)]">  <FcGoogle /> Sign Up with Google</button>
             </div>
-            <div className="relative w-11/12 max-w-[450px] self-start">
+            <div className="relative w-11/12 max-w-[450px] self-center md:self-start">
                 <img
                     src={frameImg}
                     alt="pic"
